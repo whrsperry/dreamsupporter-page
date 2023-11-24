@@ -1,0 +1,43 @@
+@use '../settings/color' as color;
+@use '../settings/font-family' as font-family;
+@use '../settings/font-weight' as font-weight;
+@use '../tools/media-queries' as media-queries;
+@use '../tools/mixin' as mixin;
+@use '../tools/function' as function;
+
+.intro {
+  height: 695px;
+  background-color: red;
+  background-size: cover;
+  @include mixin.center;
+  @include media-queries.sp {
+    height: 348px
+  }
+
+  &__container {
+    @include mixin.max-width(670px);
+  }
+
+  &__title {
+    color: color.$white;
+    font-family: font-family.$seikai;
+    font-size: 1.8rem;
+    font-weight: font-weight.$regular;
+    line-height: function.getem(18, 32);
+    @include media-queries.sp {
+      font-size: 1rem;
+    }
+
+    &--big {
+      font-size: 4.9rem;
+      font-weight: font-weight.$bold;
+      line-height: function.getem(49, 62);
+      @include media-queries.mx1200 {
+        font-size: 3.7rem;
+      }
+      @include media-queries.sp {
+        font-size: 2.45rem;
+      }
+    }
+  }
+}

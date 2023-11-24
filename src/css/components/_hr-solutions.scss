@@ -1,0 +1,319 @@
+@use '../settings/color' as color;
+@use '../settings/font-family' as font-family;
+@use '../settings/font-weight' as font-weight;
+@use '../tools/media-queries' as media-queries;
+@use '../tools/mixin' as mixin;
+@use '../tools/function' as function;
+
+.hr-solutions {
+  position: relative;
+  background-color: color.$white-fb;
+
+  &__container {
+    padding: 110px 0 165px;
+    @include mixin.max-width(1100px);
+    @include media-queries.mx1200 {
+      max-width: 100%;
+      padding: 50px 5%;
+    }
+    @include media-queries.sp {
+      padding: 55px 10% 83px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 60px;
+    color: color.$red-e6;
+    font-family: font-family.$seikai;
+    font-size: 3rem;
+    text-align: center;
+    letter-spacing: 0.5em;
+    line-height: function.getem(30, 42);
+    @include media-queries.mx1200 {
+      margin-bottom: 40px;
+      font-size: 1.8rem;
+    }
+    @include media-queries.sp {
+      margin-bottom: 0;
+      font-size: 1.5rem;
+    }
+
+    &--big {
+      font-size: 4.3rem;
+      font-weight: font-weight.$bold;
+      letter-spacing: 0;
+      line-height: function.getem(43, 42);
+      @include media-queries.mx1200 {
+        font-size: 3.1rem;
+      }
+      @include media-queries.sp {
+        font-size: 2.15rem;
+      }
+    }
+  }
+
+  &__nav {
+    @include mixin.center;
+    @include media-queries.mx1200 {
+      flex-wrap: wrap;
+      width: 700px;
+      margin: 0 auto;
+    }
+    @include media-queries.sp {
+      width: 100%;
+    }
+  }
+
+  &__nav-item {
+    width: 220px;
+    @include media-queries.mx1200 {
+      width: 180px;
+    }
+    @include media-queries.sp {
+      width: 33.3%;
+      margin-top: 20px;
+    }
+
+    &--mx1200-mt-20 {
+      @include media-queries.mx1200 {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__header-container {
+    position: relative;
+    width: 125px;
+    background-color: color.$red-e6;
+    @include media-queries.sp {
+      width: 60%;
+    }
+  }
+
+  &__header {
+    color: color.$white;
+    font-size: 2.1rem;
+    font-family: font-family.$helvetica;
+    font-weight: font-weight.$light;
+    text-align: center;
+    line-height: function.getem(21, 21);
+    @include media-queries.mx1200 {
+      font-size: 1.8rem;
+    }
+    @include media-queries.sp {
+      font-size: 1rem;
+    }
+
+    &--number {
+      margin-left: 5px;
+      font-size: 4.3rem;
+      font-family: font-family.$snell;
+      font-weight: font-weight.$regular;
+      line-height: function.getem(43, 43);
+      @include media-queries.mx1200 {
+        font-size: 3.1rem;
+      }
+      @include media-queries.sp {
+        margin-left: 2.5px;
+        font-size: 2.15rem;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -49px;
+      border-bottom: 50px solid color.$red-e6;
+      border-right: 50px solid transparent;
+      @include media-queries.sp {
+      right: -29px;
+      border-bottom: 30px solid color.$red-e6;
+      border-right: 30px solid transparent;
+      }
+    }
+  }
+
+  &__nav-content {
+    position: relative;
+    @include mixin.center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 295px;
+    padding: 25px 10px;
+    background-color: color.$white-fb;
+    border: 2px solid color.$red-e6;
+    z-index: 1;
+    cursor: pointer;
+    @include media-queries.mx1200 {
+      height: 250px;
+    }
+    @include media-queries.sp {
+      height: 150px;
+      padding: 10px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: color.$red-e6;
+      transform: scaleX(0);
+      transform-origin: left;  
+      transition: transform .2s ease-in;
+      z-index: -1;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+      color: color.$white;
+    }
+
+    &:hover {
+      .hr-solutions__description {
+        color: color.$white;
+      }
+
+      .hr-solutions__arrow-left-icon,
+      .hr-solutions__arrow-right-icon {
+        background-color: color.$white;
+      }
+    }
+
+    &--active {
+      background-color: color.$red-e6;
+    }
+  }
+
+  &__description {
+    color: color.$red-e6;
+    font-size: 2rem;
+    font-weight: font-weight.$bold;
+    text-align: center;
+    line-height: function.getem(25, 39);
+    @include media-queries.mx1200 {
+      font-size: 1.8rem;
+    }
+    @include media-queries.sp {
+      font-size: 1.20rem;
+    }
+
+    &--fs-small {
+      @include media-queries.sp {
+        font-size: 1rem;
+      }
+    }
+
+    &--active {
+      color: color.$white;
+    }
+  }
+
+  &__arrow-left-icon {
+    position: relative;
+    left: 8px;
+    display: inline-block;
+    width: 30px;
+    height: 3px;
+    background-color: color.$red-e6;
+    border-radius: 40px;
+    rotate: 30deg;
+    @include media-queries.sp {
+      left: 5px;
+      width: 15px;
+      height: 1.5px;
+    }
+
+    &--active {
+      background-color: color.$white;
+    }
+  }
+
+  &__arrow-right-icon {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 3px;
+    background-color: color.$red-e6;
+    border-radius: 40px;
+    rotate: -30deg;
+    @include media-queries.sp {
+      width: 15px;
+      height: 1.5px;
+    }
+
+    &--active {
+      background-color: color.$white;
+    }
+  }
+
+  &__side-banner {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    @include mixin.center;
+    flex-direction: column;
+    width: 85px;
+    height: 390px;
+    background: url('../src/img/hr-solutions-side-banner.png') no-repeat;
+    background-size: cover;
+    z-index: 1;
+    cursor: pointer;
+    @include media-queries.sp {
+      right: 5px;
+      width: 8%;
+      height: 195px;
+    }
+  }
+
+  &__side-banner-text {
+    color: color.$white;
+    font-size: 2rem;
+    font-family: font-family.$hiraku;
+    font-weight: font-weight.$bold;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    @include media-queries.mx1200 {
+      font-size: 1.8rem;
+    }
+    @include media-queries.sp {
+      font-size: 1rem;
+    }
+  }
+
+  &__side-banner-arrow {
+    position: relative;
+    top: 2px;
+    margin-top: 10px;
+    width: 25px;
+    height: 25px;
+    background-color: color.$white;
+    border: none;
+    border-radius: 50%;
+    @include media-queries.sp {
+      width: 12px;
+      height: 12px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 45%;
+      width: 5px;
+      height: 5px;
+      translate: -50% -50%;
+      rotate: -45deg;
+      border-bottom: 2px solid color.$blue-00;
+      border-right: 2px solid color.$blue-00;
+      @include media-queries.sp {
+        width: 20%;
+        height: 2.5px;
+      }
+    }
+  }
+}

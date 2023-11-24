@@ -1,0 +1,21 @@
+@use 'elements/reset';
+@use 'elements/global';
+
+@use 'components/hero';
+@use 'components/intro';
+@use 'components/hr-solutions';
+@use 'components/solution';
+@use 'components/button';
+@use 'components/title';
+@use 'components/case-study';
+@use 'components/faq';
+@use 'components/process';
+@use 'components/contact';
+@use 'components/news';
+@use 'components/about';
+@use 'components/greeting';
+@use 'components/footer';
+
+@use 'trumps/helper';
+@use 'trumps/splide';
+@use 'trumps/mwwp';

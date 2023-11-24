@@ -1,0 +1,13 @@
+@function getsp($val) {
+  $result: (330/750) * $val;
+  @return $result;
+}
+
+@function getsp375($val) {
+  $result: (375/750) * $val;
+  @return $result;
+}
+
+@function getem($base-size, $illust-lheight) {
+  @return ($illust-lheight / $base-size) * 1em;
+}

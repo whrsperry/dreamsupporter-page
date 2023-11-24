@@ -1,0 +1,54 @@
+@use '../settings/color' as color;
+@use '../settings/font-family' as font-family;
+@use '../settings/font-weight' as font-weight;
+@use '../tools/media-queries' as media-queries;
+@use '../tools/mixin' as mixin;
+@use '../tools/function' as function;
+
+.mwform-checkbox-field-text {
+  margin-left: 10px;
+  color: color.$white;
+  font-size: 2rem;
+  letter-spacing: 0.07em;
+  @include media-queries.sp {
+    margin-left: 5px;
+    font-size: 1.5rem;
+  }
+}
+
+.mwform-checkbox-field {
+  width: fit-content;
+}
+
+.mwform-checkbox-field > label {
+  display: flex;
+  align-items: center;
+}
+
+.mwform-checkbox-field-text {
+  cursor: pointer;
+}
+
+.mw_wp_form_confirm {
+  .mwwp-confirm-hidden {
+    display: none;
+  }
+}
+
+.mw_wp_form .error {
+  margin-top: 5px !important;
+  color: color.$yellow-ff !important;
+  font-size: 1.4rem !important;
+  font-family: font-family.$hiraku !important;
+  @include media-queries.sp {
+    font-size: 1.2rem !important;
+  }
+}
+
+.mwform-complete-message {
+  color: color.$white;
+  font-size: 1.6rem;
+  @include media-queries.sp {
+    font-size: 1.4rem;
+  }
+}

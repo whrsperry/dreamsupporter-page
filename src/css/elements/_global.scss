@@ -1,0 +1,20 @@
+@use '../settings/color' as color;
+@use '../settings/font-family' as font-family;
+@use '../settings/font-weight' as font-weight;
+@use '../tools/media-queries' as media-queries;
+
+
+html {
+  font-family: font-family.$hiraku;
+  color: color.$text;
+  font-size: 10px;
+  font-feature-settings: 'palt';
+  font-weight: font-weight.$regular;
+  scroll-behavior: smooth;
+  @media screen and (max-width: 980px) {
+    min-width: 980px;
+  }
+  @include media-queries.sp {
+    min-width: 100%;
+  }
+}

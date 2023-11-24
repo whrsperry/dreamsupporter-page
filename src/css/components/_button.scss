@@ -1,0 +1,166 @@
+@use '../settings/color' as color;
+@use '../settings/font-family' as font-family;
+@use '../settings/font-weight' as font-weight;
+@use '../tools/media-queries' as media-queries;
+@use '../tools/mixin' as mixin;
+
+.button {
+  width: fit-content;
+  height: 60px;
+  margin: 35px auto 0;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: 2px solid color.$white;
+  border-radius: 40px;
+  cursor: pointer;
+  @include media-queries.sp {
+    height: 30px;
+    margin-top: 50px;
+  }
+
+  &--rectangle-red {
+    position: relative;
+    height: 95px;
+    margin-top: 115px;
+    padding: 15px 125px;
+    background: color.$red-e6;
+    border: none;
+    border-radius: 0;
+    @include media-queries.mx1200 {
+      height: 70px;
+      margin-top: 75px;
+      padding: 10px 125px;
+    }
+    @include media-queries.sp {
+      height: 48px;
+      margin-top: 50px;
+      padding: 8px 40px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-top: 95px solid color.$red-a1;
+      border-right: 95px solid transparent;
+      @include media-queries.mx1200 {
+        border-top: 71px solid color.$red-a1;
+        border-right: 71px solid transparent;
+      }
+      @include media-queries.sp {
+        border-top: 48px solid color.$red-a1;
+        border-right: 48px solid transparent;
+      }
+    }
+  }
+
+  &--rectangle-black {
+    position: relative;
+    width: 520px;
+    height: 98px;
+    padding: 0;
+    margin-top: 0;
+    background: color.$black;
+    border: none;
+    border-radius: 0;
+    @include media-queries.sp {
+      max-width: 100%;
+      width: 260px;
+      height: 49px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-top: 99px solid color.$gray-22;
+      border-right: 99px solid transparent;
+      z-index: 1;
+      @include media-queries.mx1200 {
+        border-top: 98px solid color.$gray-22;
+        border-right: 98px solid transparent;
+      }
+      @include media-queries.sp {
+        border-top: 49px solid color.$gray-22;
+        border-right: 49px solid transparent;
+      }
+    }
+  }
+
+  &--border-red {
+    border: 2px solid color.$red-e6;
+  }
+
+  &--border-gray {
+    border: 2px solid color.$gray-72;
+    margin-top: 50px;
+    @include media-queries.sp {
+      margin-top: 25px;
+    }
+  }
+
+  &__text {
+    font-size: 1.97rem;
+    font-weight: font-weight.$bold;
+    color: color.$white;
+    @include media-queries.sp {
+      font-size: 1rem;
+    }
+
+    &--large {
+      width: 100%;
+      height: 100%;
+      font-size: 4rem;
+      background-color: transparent;
+      border: none;
+      z-index: 2;
+      cursor: pointer;
+      @include media-queries.mx1200 {
+        font-size: 3rem;
+      }
+      @include media-queries.sp {
+        font-size: 1.8rem;
+      }
+    }
+
+    &--red {
+      color: color.$red-e6;
+    }
+
+    &--gray {
+      color: color.$gray-72;
+    }
+  }
+
+  &__arrow-icon {
+    width: 27px;
+    height: 27px;
+    margin-left: 15px;
+    object-fit: contain;
+    @include media-queries.mx1200 {
+      width: 22px;
+      height: 22px;
+    }
+    @include media-queries.sp {
+      width: 14px;
+      height: 14px;
+      margin-left: 7.5px;
+    }
+
+    &--big {
+      width: 32px;
+      height: 32px;
+      margin-left: 20px;
+      @include media-queries.sp {
+        width: 16px;
+        height: 16px;
+        margin-left: 10px;
+      }
+    }
+  }
+}

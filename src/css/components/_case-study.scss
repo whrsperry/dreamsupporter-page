@@ -1,0 +1,138 @@
+@use '../settings/color' as color;
+@use '../settings/font-family' as font-family;
+@use '../settings/font-weight' as font-weight;
+@use '../tools/media-queries' as media-queries;
+@use '../tools/mixin' as mixin;
+@use '../tools/function' as function;
+
+.case-study {
+  background: url("../src/img/case-study-background@2x.png") no-repeat center center;
+  background-size: cover;
+  
+  &__container {
+    padding: 65px 0 80px;
+    @include mixin.max-width(1280px);
+    @include media-queries.mx1200 {
+      max-width: 100%;
+      padding: 65px 5% 80px;
+    }
+    @include media-queries.sp {
+      padding: 30px 15% 40px;
+    }
+  }
+
+  &__item {
+    width: 348px;
+    padding: 15px;
+    background-color: color.$white;
+    @include media-queries.sp {
+      width: 175px;
+      padding: 8px;
+      margin-left: 0;
+    }
+  }
+
+  &__category-container {
+    @include mixin.center;
+    justify-content: normal;
+  }
+
+  &__category-type {
+    width: 44px;
+    height: 22px;
+    padding-left: 6px;
+    margin-right: 10px;
+    color: color.$white;
+    font-size: 1.4rem;
+    background-color: color.$red-a1;
+    @include media-queries.sp {
+      width: 35px;
+      height: auto;
+      margin-right: 5px;
+      font-size: 1rem;
+    }
+  }
+
+  &__category {
+    color: color.$black;
+    font-size: 1.5rem;
+    @include media-queries.sp {
+      font-size: 1rem;
+    }
+
+    &--fs-smaller {
+      @include media-queries.sp {
+        font-size: .9rem;
+      }
+    }
+  }
+
+  &__title {
+    min-height: 80px;
+    margin-bottom: 15px;
+    color: color.$red-a1;
+    font-size: 2.4rem;
+    font-weight: font-weight.$bold;
+    line-height: function.getem(30, 40);
+    @include media-queries.sp {
+      min-height: 40px;
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+    }
+  }
+
+  &__subtitle-container {
+    @include mixin.center;
+    justify-content: normal;
+    padding: 10px 0;
+    margin-bottom: 15px;
+    background-color: color.$red-a1;
+    @include media-queries.sp {
+      padding: 5px 0;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__subtitle {
+    margin-right: 10px;
+    color: color.$white;
+    font-size: 1.8rem;
+    @include media-queries.sp {
+      margin-right: 5px;
+      font-size: 1rem;
+    }
+
+    &--white {
+      padding: 5px 5px;
+      color: color.$red-a1;
+      font-size: 1.4rem;
+      background-color: color.$white;
+      @include media-queries.sp {
+        padding: 2px 2px;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &__description {
+    margin-bottom: 10px;
+    min-height: 120px;
+    font-size: 1.8rem;
+    line-height: function.getem(20, 30);
+    @include media-queries.sp {
+      min-height: 60px;
+      margin-bottom: 5px;
+      font-size: 1rem;
+    }
+  }
+
+  &__image {
+    width: 315px;
+    height: 210px;
+    border: 2px solid color.$red-a1;
+    @include media-queries.sp {
+      width: 158px;
+      height: 105px;
+    }
+  }
+}

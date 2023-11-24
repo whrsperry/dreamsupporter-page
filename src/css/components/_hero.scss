@@ -1,0 +1,100 @@
+@use '../settings/color' as color;
+@use '../settings/font-family' as font-family;
+@use '../settings/font-weight' as font-weight;
+@use '../tools/media-queries' as media-queries;
+@use '../tools/mixin' as mixin;
+
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('../src/img/main-visual-background.png') no-repeat center;
+  background-size: cover;
+  @include media-queries.sp {
+    max-width: 100%;
+    padding: 0 5%;
+    @include mixin.center;
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 925px;
+    height: 360px;
+    padding: 30px 30px;
+    background-color: rgba(color.$white-f9, 0.8);
+    text-align: center;
+    @include media-queries.mx1200 {
+      width: 600px;
+      height: 250px;
+    }
+    @include media-queries.sp {
+      width: 100%;
+      height: auto;
+      position: static;
+      top: 0;
+      left: 0;
+      padding: 3%;
+      transform: translate(0, 0);
+    }
+  }
+
+  &__text {
+    color: color.$red-e6;
+    font-family: font-family.$seikai;
+    font-size: 3rem;
+    letter-spacing: 0.09em;
+    @include media-queries.mx1200 {
+      font-size: 2rem;
+    }
+    @include media-queries.sp {
+      font-size: 1.8rem;
+    }
+
+    &--black {
+      margin-bottom: 40px;
+      color: color.$black;
+      font-size: 4rem;
+      letter-spacing: 0;
+      @include media-queries.mx1200 {
+        margin-bottom: 30px;
+        font-size: 2rem;
+      }
+      @include media-queries.sp {
+        margin-bottom: 25px;
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  &__logo {
+    width: 355px;
+    height: 60px;
+    object-fit: cover;
+    margin-bottom: 40px;
+    @include media-queries.mx1200 {
+      width: 300px;
+      height: 50px;
+      margin-bottom: 30px;
+    }
+    @include media-queries.sp {
+      width: 40%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__scroll-icon {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    margin: 0 auto;
+    object-fit: cover;
+    @include media-queries.sp {
+      bottom: 40px;
+      height: 48px;
+    }
+  }
+}

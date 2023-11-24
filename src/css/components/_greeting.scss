@@ -1,0 +1,106 @@
+@use '../settings/color' as color;
+@use '../settings/font-family' as font-family;
+@use '../settings/font-weight' as font-weight;
+@use '../tools/media-queries' as media-queries;
+@use '../tools/mixin' as mixin;
+@use '../tools/function' as function;
+
+.greeting {
+  background-color: color.$white-fb;
+
+  &__container {
+    padding: 100px 0 85px;
+    @include mixin.max-width(980px);
+    @include media-queries.mx1200 {
+      max-width: 100%;
+      padding: 50px 5% 40px;
+    }
+    @include media-queries.sp {
+      padding: 50px 10%;
+    }
+  }
+
+  &__header {
+    margin-bottom: 80px;
+    color: color.$red-e6;
+    font-size: 3rem;
+    font-family: font-family.$hiramin;
+    font-weight: font-weight.$bold;
+    line-height: function.getem(30, 40.25);
+    @include media-queries.mx1200 {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    @include media-queries.sp {
+      margin-bottom: 20px;
+      font-size: 1.6rem;
+    }
+  }
+
+  &__body {
+    margin-bottom: 40px;
+    font-size: 2rem;
+    text-align: justify;
+    line-height: function.getem(20, 35);
+    @include media-queries.sp {
+      margin-bottom: 20px;
+      font-size: 1.3rem;
+    }
+  }
+
+  &__footer {
+    @include mixin.center;
+    justify-content: space-between;
+    @include media-queries.sp {
+      flex-direction: column;
+    }
+  }
+
+  &__representative {
+    font-size: 2rem;
+    font-family: font-family.$hiramin;
+    @include media-queries.sp {
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+    }
+  }
+
+  &__signature {
+    font-size: 4.5rem;
+    font-family: font-family.$seikai;
+    @include media-queries.sp {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__image-container {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 275px;
+      height: 185px;
+      background-color: color.$pink-fa;
+      @include media-queries.sp {
+        top: 25px;
+        width: 138px;
+        height: 93px;
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+    z-index: 1;
+    object-fit: cover;
+    translate: -10px -10px;
+    @include media-queries.sp {
+      width: 138px;
+      height: 93px;
+      translate: -10px 15px;
+    }
+  }
+}

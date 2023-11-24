@@ -1,0 +1,94 @@
+@use '../settings/color' as color;
+@use '../settings/font-family' as font-family;
+@use '../settings/font-weight' as font-weight;
+@use '../tools/media-queries' as media-queries;
+@use '../tools/mixin' as mixin;
+@use '../tools/function' as function;
+
+.footer {
+  background-color: color.$red-e6;
+
+  &__content {
+    padding: 50px 0;
+    @include mixin.center;
+    justify-content: normal;
+    flex-direction: column;
+    @include mixin.max-width(680px);
+    @include media-queries.mx1200 {
+      max-width: 100%;
+      padding: 30px 5%;
+    }
+    @include media-queries.sp {
+      padding: 20px 10%;
+    }
+  }
+
+  &__logo {
+    width: 428px;
+    margin-bottom: 45px;
+    object-fit: cover;
+    @include media-queries.mx1200 {
+      width: 360px;
+      height: 65px;
+      margin-bottom: 35px;
+    }
+    @include media-queries.sp {
+      width: 214px;
+      height: 40px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text-container {
+    display: flex;
+  }
+
+  &__address-container {
+    margin-right: 20px;
+  }
+
+  &__address {
+    color: color.$white;
+    font-size: 2.2rem;
+    letter-spacing: 0.025em;
+    line-height: function.getem(22, 36.27);
+    @include media-queries.sp {
+      font-size: 1.1rem;
+      letter-spacing: normal;
+    }
+    
+    &--bold {
+      font-size: 2.7rem;
+      font-weight: font-weight.$bold;
+      line-height: function.getem(27, 36.27);
+      @include media-queries.sp {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &__facebook {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    @include media-queries.sp {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  &__copyright {
+    @include mixin.center;
+    align-items: normal;
+    padding: 15px 0;
+    color: color.$white;
+    font-size: 1.4rem;
+    letter-spacing: 0.025em;
+    line-height: function.getem(14, 26);
+    background-color: color.$red-a1;
+    @include media-queries.sp {
+      padding: 8px 0;
+      font-size: 1rem;
+    }
+  }
+}

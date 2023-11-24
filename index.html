@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dream Supporter</title>
+
+  <!-- Style.css file -->
+  <link rel="stylesheet" href="./dist/styles.css">
+
+  <!-- Include Splide.css from CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+
+  <!-- Include Splide.js from CDN -->
+  <!-- Specify the full path to the module file -->
+  <script type="module">
+    import Splide from 'https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/js/splide.esm.js';
+
+    // Your Splide configuration options
+    const splide = new Splide('.splide', {
+      type: 'loop',
+      perPage: 3,
+      perMove: 1,
+      rewind: true,
+      focus: 'center',
+      autoWidth: true,
+      snap: true,
+      pagination: false,
+      gap: '30px',
+      breakpoints: {
+        1200: {
+          perPage: 2
+        },
+        767: {
+          perPage: 1,
+          gap: '10px'
+        },
+      }
+    });
+    splide.mount();
+  </script>
+</head>
+<body>
+  <!-- =================================== Hero Section =================================== -->
+  <section class="hero">
+    <div class="hero__text-box">
+      <h1 class="hero__text hero__text--black">Comprehensive consulting firm</h1>
+      <img class="hero__logo" src="./src/img/logo.png" alt="dream supporter logo">
+      <h1 class="hero__text">Specialized in improving performance</h1>
+    </div>
+    <img class="hero__scroll-icon" src="./src/img/scroll-icon.png" alt="scroll icon">
+  </section>
+
+  <!-- =================================== Intro Section =================================== -->
+  <section class="intro">
+    <div class="intro__container">
+      <h2 class="intro__title">People, goods, money, and information</h2>
+      <h2 class="intro__title intro__title--big">
+        Unlocking the Potential of Resources &
+        <br>
+        Organizational Management.
+      </h2>
+    </div>
+  </section>
+
+  <!-- =================================== HR Solutions Section =================================== -->
+  <section class="hr-solutions">
+    <div class="hr-solutions__container">
+      <h2 class="hr-solutions__title">
+        Human Resource Professionals
+        <br>
+        <span class="hr-solutions__title hr-solutions__title--big">Are you having trouble with these things?</span>
+      </h2>
+      <ul class="hr-solutions__nav">
+        <li class="hr-solutions__nav-item">
+          <div class="hr-solutions__header-container">
+            <h3 class="hr-solutions__header">Solution. 
+              <span class="hr-solutions__header hr-solutions__header--number">1</span>
+            </h3>
+          </div>
+          <a class="hr-solutions__nav-content js-solution-nav" href="#section1">
+            <p class="hr-solutions__description js-solution-description">
+              Recruitment costs
+              <br>
+              continue to rise
+            </p>
+            <div class="hr-solutions__arrow-button">
+              <span class="hr-solutions__arrow-left-icon js-solution-arrow-left"></span>
+              <span class="hr-solutions__arrow-right-icon js-solution-arrow-right"></span>
+            </div>
+          </a>
+        </li>
+        <li class="hr-solutions__nav-item">
+          <div class="hr-solutions__header-container">
+            <h3 class="hr-solutions__header">Solution.  
+              <span class="hr-solutions__header hr-solutions__header--number">2</span>
+            </h3>
+          </div>
+          <a class="hr-solutions__nav-content js-solution-nav" href="#section2">
+            <p class="hr-solutions__description js-solution-description">
+              Analyze the state
+              <br>
+              of my business
+            </p>
+            <div class="hr-solutions__arrow-button">
+              <span class="hr-solutions__arrow-left-icon js-solution-arrow-left"></span>
+              <span class="hr-solutions__arrow-right-icon js-solution-arrow-right"></span>
+            </div>
+          </a>
+        </li>
+        <li class="hr-solutions__nav-item">
+          <div class="hr-solutions__header-container">
+            <h3 class="hr-solutions__header">Solution. 
+              <span class="hr-solutions__header hr-solutions__header--number">3</span>
+            </h3>
+          </div>
+          <a class="hr-solutions__nav-content js-solution-nav" href="#section3">
+            <p class="hr-solutions__description js-solution-description">
+              High employee
+              <br>
+              turnover rate
+            </p>
+            <div class="hr-solutions__arrow-button">
+              <span class="hr-solutions__arrow-left-icon js-solution-arrow-left"></span>
+              <span class="hr-solutions__arrow-right-icon js-solution-arrow-right"></span>
+            </div>
+          </a>
+        </li>
+        <li class="hr-solutions__nav-item hr-solutions__nav-item--mx1200-mt-20">
+          <div class="hr-solutions__header-container">
+            <h3 class="hr-solutions__header">Solution.  
+              <span class="hr-solutions__header hr-solutions__header--number">4</span>
+            </h3>
+          </div>
+          <a class="hr-solutions__nav-content js-solution-nav" href="#section4">
+            <p class="hr-solutions__description hr-solutions__description--fs-small js-solution-description">
+            Keeping up with changes in laws
+              <br>
+              "Temporary Staffing Law" and
+              <br>
+              "Workplace Reform Law"
+            </p>
+            <div class="hr-solutions__arrow-button">
+              <span class="hr-solutions__arrow-left-icon js-solution-arrow-left"></span>
+              <span class="hr-solutions__arrow-right-icon js-solution-arrow-right"></span>
+            </div>
+          </a>
+        </li>
+        <li class="hr-solutions__nav-item hr-solutions__nav-item--mx1200-mt-20">
+          <div class="hr-solutions__header-container">
+            <h3 class="hr-solutions__header">Solution.  
+              <span class="hr-solutions__header hr-solutions__header--number">5</span>
+            </h3>
+          </div>
+          <a class="hr-solutions__nav-content js-solution-nav" href="#section5">
+            <p class="hr-solutions__description js-solution-description">
+              Unmatched personnel workforce in the company
+            </p>
+            <div class="hr-solutions__arrow-button">
+              <span class="hr-solutions__arrow-left-icon js-solution-arrow-left"></span>
+              <span class="hr-solutions__arrow-right-icon js-solution-arrow-right"></span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="hr-solutions__side-banner">
+      <a href="#targetContactELement" class="hr-solutions__side-banner-text">Contact Us</a>
+      <div class="hr-solutions__side-banner-arrow"></div>
+    </div>
+  </section>
+
+  <!-- =================================== Solution Section =================================== -->
+  <section class="solution">
+    <div class="solution__container">
+      <div class="solution__list">
+        <div class="solution__item solution__item--mt-0">
+          <div class="solution__title-container">
+            <h2 class="solution__text">Solution. 
+              <span class="solution__text solution__text--number" id="section1">1</span>>>>  
+            </h2>
+            <h2 class="solution__text solution__text--title">Recruitment costs continue to rise</h2>
+          </div>
+          <div class="solution__content">
+            <img class="solution__image" src="./src/img/solution-image1.png" alt="solution 1 image">
+            <div class="solution__content-text-container">
+              <h3 class="solution__content-header">Recruitment costs have not stopped rising.</h3>
+              <div class="solution__text-wrapper">
+                <h4 class="solution__content-subheader">Recruitment</h4>
+                <p class="solution__description">
+                  From introducing career personnel to expanding sales. We offer an efficient way to gather temporary staff. From recruitment to matching and temporary staffing, we identify and optimize. We identify and optimize issues from recruitment to matching and temporary staffing.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="solution__item">
+          <div class="solution__title-container">
+            <h2 class="solution__text">Solution. 
+              <span class="solution__text solution__text--number" id="section2">2</span>>>>  
+            </h2>
+            <h2 class="solution__text solution__text--title">Analyze the state of my business</h2>
+          </div>
+          <div class="solution__content solution__content--reverse-position">
+            <img class="solution__image" src="./src/img/solution-image2.png" alt="solution 2 image">
+            <div class="solution__content-text-container solution__content-text-container--display-flex">
+              <h3 class="solution__content-header solution__content-header--position-right">Clarify issues within the company</h3>
+              <div class="solution__text-wrapper solution__text-wrapper--padding">
+                <h4 class="solution__content-subheader solution__content-subheader--letter-spacing">Organizational and Business Diagnosis</h4>
+                <p class="solution__description">
+                  To achieve continuous business growth, it is essential to and quantify the key points to maximize the performance of human resources. Quantifying the key points to maximize the performance of human resources, and clarify the direction to be taken.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="solution__item">
+          <div class="solution__title-container">
+            <h2 class="solution__text">Solution. 
+              <span class="solution__text solution__text--number" id="section3">3</span>>>>  
+            </h2>
+            <h2 class="solution__text solution__text--title">High employee turnover rate</h2>
+          </div>
+          <div class="solution__content">
+            <img class="solution__image" src="./src/img/solution-image3.png" alt="solution 3 image">
+            <div class="solution__content-text-container solution__content-text-container--mt-25">
+              <h3 class="solution__content-header">Goal-oriented human resources development</h3>
+              <div class="solution__text-wrapper">
+                <h4 class="solution__content-subheader solution__content-subheader--mb-0 solution__content-subheader--fs">H.R. Development</h4>
+                <p class="solution__description solution__description--small">
+                  We provide strong support for your company's human resource development through training and coaching. We support your company's human resource development with training and coaching.
+                </p>
+              </div>
+              <div class="solution__text-wrapper solution__text-wrapper--pt-40">
+                <h4 class="solution__content-subheader solution__content-subheader--mb-0 solution__content-subheader--fs solution__content-subheader--letter-spacing">Leadership Development Programs</h4>
+                <p class="solution__description solution__description--small">
+                  Developing leaders who can balance ES and CS at a high level and have an impact on business performance.
+                </p>
+              </div>
+              <div class="solution__text-wrapper solution__text-wrapper--pt-40">
+                <h4 class="solution__content-subheader solution__content-subheader--mb-0 solution__content-subheader--fs">Organization Coaching</h4>
+                <p class="solution__description solution__description--small">
+                  Maximizing Organizational Performance, ONE-on-ONE Program
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="solution__item">
+          <div class="solution__title-container">
+            <h2 class="solution__text">Solution. 
+              <span class="solution__text solution__text--number" id="section4">4</span>>>>  
+            </h2>
+            <h2 class="solution__text solution__text--title">
+              Keeping up with changes in the Law
+            </h2>
+          </div>
+          <div class="solution__content solution__content--reverse-position">
+            <img class="solution__image" src="./src/img/solution-image4.png" alt="solution 4 image">
+            <div class="solution__content-text-container solution__content-text-container--display-flex">
+              <h3 class="solution__content-header solution__content-header--position-right">Legal Assistance</h3>
+              <div class="solution__text-wrapper solution__text-wrapper--padding">
+                <h4 class="solution__content-subheader solution__content-subheader--letter-spacing">Legal Support Services</h4>
+                <p class="solution__description">
+                  International administrative specializing in staffing / social insurance Labor Consultant support. How should we respond to the changes in the law? We will provide advice tailored to your company's needs. We can also provide consulting. We can also apply for a foreigner's status of residence.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="solution__item">
+          <div class="solution__title-container">
+            <h2 class="solution__text">Solution. 
+              <span class="solution__text solution__text--number" id="section5">5</span>>>>  
+            </h2>
+            <h2 class="solution__text solution__text--title">Unmatched personnel in the workforce </h2>
+          </div>
+          <div class="solution__content">
+            <img class="solution__image" src="./src/img/solution-image5.png" alt="solution 5 image">
+            <div class="solution__content-text-container">
+              <h3 class="solution__content-header">
+                Aimed at staff happiness & career training
+              </h3>
+              <div class="solution__text-wrapper solution__text-wrapper--padding-top">
+                <h4 class="solution__content-subheader solution__content-subheader--letter-spacing">Unmatched human resources and senior issues</h4>
+                <p class="solution__description">
+                  Experienced career counselors "encourage self-motivated awareness change" for unmatched personnel to encourage a smooth career change. We also provide training programs to help them change their careers smoothly.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="button button--rectangle-red" href="#targetContactELement">
+        <p class="button__text button__text--large">Contact Us</p>
+        <img class="button__arrow-icon button__arrow-icon--big" src="./src/img/button-arrow-icon-bold.png" alt="red button arrow icon">
+      </a>
+    </div>
+  </section>
+
+  <!-- =================================== Case Study Section =================================== -->
+  <section class="case-study">
+    <div class="case-study__container">
+      <h2 class="title__text title__text--white">Case Studies</h2>
+      <div class="case-study__cards-container">
+        <div class="splide">
+          <div class="splide__arrows">
+            <div class="splide__arrow splide__arrow--prev">
+              <img class=" splide__arrow-icon" src="./src/img/case-study-arrow-previous.png" alt="previous button">
+            </div>
+            <div class="splide__arrow splide__arrow--next">
+              <img class="splide__arrow-icon" src="./src/img/case-study-arrow-next.png" alt="next button">
+            </div>
+          </div>
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <div class="case-study__item">
+                  <div class="case-study__category-container">
+                    <p class="case-study__category-type">Type</p>
+                    <p class="case-study__category">Mid-size care area dispatch company</p>
+                  </div>
+                  <h3 class="case-study__title">Developing candidates for the management</h3>
+                  <div class="case-study__subtitle-container">
+                    <p class="case-study__subtitle case-study__subtitle--white">solution</p>
+                    <p class="case-study__subtitle">Recruitment</p>
+                  </div>
+                  <p class="case-study__description">In conjunction with business expansion, training for the next generation was conducted 8 times over 1 year to fit in with plans for new store openings</p>
+                  <img class="case-study__image" src="./src/img/case-study-image1.png" alt="case study image 1">
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="case-study__item">
+                  <div class="case-study__category-container">
+                    <p class="case-study__category-type">Type</p>
+                    <p class="case-study__category case-study__category--fs-smaller">Specialized Company for Foreigners</p>
+                  </div>
+                  <h3 class="case-study__title">Utilization of foreign nationals</h3>
+                  <div class="case-study__subtitle-container">
+                    <p class="case-study__subtitle case-study__subtitle--white">solution</p>
+                    <p class="case-study__subtitle">Application of a work visa</p>
+                  </div>
+                  <p class="case-study__description">We provide a wide range of professional support, from changing a student visa to a work visa.</p>
+                  <img class="case-study__image" src="./src/img/case-study-image2.png" alt="case study image 2">
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="case-study__item">
+                  <div class="case-study__category-container">
+                    <p class="case-study__category-type">Type</p>
+                    <p class="case-study__category">IT Firm</p>
+                  </div>
+                  <h3 class="case-study__title">Increase in sales staff during vertical start-up period</h3>
+                  <div class="case-study__subtitle-container">
+                    <p class="case-study__subtitle case-study__subtitle--white">solution</p>
+                    <p class="case-study__subtitle">Supply of Personnel</p>
+                  </div>
+                  <p class="case-study__description">Achieved 16 salespeople in 3 months for a company planning to hire 100 salespeople in a year for a new business launch.</p>
+                  <img class="case-study__image" src="./src/img/case-study-image3.png" alt="case study image 3">
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <a class="button" href="#">
+          <p class="button__text">View List</p>
+          <img class="button__arrow-icon" src="./src/img/button-arrow-icon-default.png" alt="default arrow icon">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================== Faq Section =================================== -->
+  <section class="faq">
+    <div class="faq__container">
+      <h2 class="title__text">Frequently Asked Questions</h2>
+      <div class="faq__list">
+        <div class="faq__item js-faq-item">
+          <div class="faq__question">
+            <p class="faq__question-icon">Q</p>
+          </div>
+          <div class="faq__text-container">
+            <h3 class="faq__header">Is there any follow-up after the training?</h3>
+            <p class="faq__description">Yes, we do. Follow-up for retention can be done by email or by assigning exercises. If you wish to follow up in person</p>
+          </div>
+          <div class="faq__side-border"></div>
+          <div class="faq__arrow">
+            <span class="faq__arrow-left-icon"></span>
+            <span class="faq__arrow-right-icon"></span>
+          </div>
+        </div>
+        <div class="faq__item js-faq-item">
+          <div class="faq__question">
+            <p class="faq__question-icon">Q</p>
+          </div>
+          <div class="faq__text-container">
+            <h3 class="faq__header">Lack of personnel to conduct business analysis and strategic planning</h3>
+            <p class="faq__description">text dummy text dummy text dummy text dummy text dummy text dummy text dummy</p>
+          </div>
+          <div class="faq__side-border"></div>
+          <div class="faq__arrow">
+            <span class="faq__arrow-left-icon"></span>
+            <span class="faq__arrow-right-icon"></span>
+          </div>
+        </div>
+        <div class="faq__item js-faq-item">
+          <div class="faq__question">
+            <p class="faq__question-icon">Q</p>
+          </div>
+          <div class="faq__text-container">
+            <h3 class="faq__header">I am concerned that personnel measures will result in labor-management problems...</h3>
+            <p class="faq__description">text dummy text dummy text dummy text dummy text dummy text dummy text dummy</p>
+          </div>
+          <div class="faq__side-border"></div>
+          <div class="faq__arrow">
+            <span class="faq__arrow-left-icon"></span>
+            <span class="faq__arrow-right-icon"></span>
+          </div>
+        </div>
+        <div class="faq__item js-faq-item">
+          <div class="faq__question">
+            <p class="faq__question-icon">Q</p>
+          </div>
+          <div class="faq__text-container">
+            <h3 class="faq__header">What kind of personnel will be referred?</h3>
+            <p class="faq__description">text dummy text dummy text dummy text dummy text dummy text dummy text dummy</p>
+          </div>
+          <div class="faq__side-border"></div>
+          <div class="faq__arrow">
+            <span class="faq__arrow-left-icon"></span>
+            <span class="faq__arrow-right-icon"></span>
+          </div>
+        </div>
+      </div>
+      <a class="button button--border-red" href="#">
+        <p class="button__text button__text--red">View List</p>
+        <img class="button__arrow-icon" src="./src/img/button-arrow-icon-red.png" alt="default arrow icon">
+      </a>
+    </div>
+  </section>
+
+  <!-- =================================== Process Section =================================== -->
+  <section class="process">
+    <h2 class="title__text">Introduction Process</h2>
+    <div class="process__steps-list">
+      <div class="process__steps-item process__steps-item--pl-30">
+        <div class="process__text-container">
+          <p class="process__text">STEP. 
+            <span class="process__text process__text--number">1</span>
+          </p>
+          <p class="process__text process__text--bold">課題提出</p>
+        </div>
+      </div>
+      <div class="process__steps-item">
+        <div class="process__text-container">
+          <p class="process__text">STEP. 
+            <span class="process__text process__text--number">2</span>
+          </p>
+          <p class="process__text process__text--bold">ご提案</p>
+        </div>
+      </div>
+      <div class="process__steps-item">
+        <div class="process__text-container">
+          <p class="process__text">STEP. 
+            <span class="process__text process__text--number">3</span>
+          </p>
+          <p class="process__text process__text--bold">実施</p>
+        </div>
+      </div>
+      <div class="process__steps-item process__steps-item--active">
+        <div class="process__triangle-shade"></div>
+        <div class="process__text-container">
+          <p class="process__text">STEP. 
+            <span class="process__text process__text--number">4</span>
+          </p>
+          <p class="process__text process__text--bold">効果測定</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================== Contact Section =================================== -->
+  <section class="contact">
+    <div class="contact__container">
+      <h2 class="title__text title__text--white">Consultation Form</h2>
+      <form class="contact__form" action="#" autocomplete="on">
+        <div class="contact__row">
+          <div class="contact__label-content"> 
+            <label class="contact__label" for="company-name">Company Name</label>
+            <div class="contact__flag-container">
+              <p class="contact__flag mwwp-confirm-hidden">required</p>
+            </div>
+          </div>
+          <div class="contact__input-container">
+            <input class="contact__input" type="text" placeholder="Example: Dream Supporter Inc." id="company-name">
+          </div>
+        </div>
+        <div class="contact__row">
+          <div class="contact__label-content"> 
+            <label class="contact__label" for="name">Contact Person</label>
+            <div class="contact__flag-container">
+              <p class="contact__flag mwwp-confirm-hidden">required</p>
+            </div>
+          </div>
+          <div class="contact__input-container">
+            <input class="contact__input" type="text" placeholder="Example: Taro Yamada" id="name">
+          </div>
+        </div>
+        <div class="contact__row">
+          <div class="contact__label-content"> 
+            <label class="contact__label" for="phone-number">Phone Number</label>
+            <div class="contact__flag-container">
+              <p class="contact__flag mwwp-confirm-hidden">required</p>
+            </div>
+          </div>
+          <div class="contact__input-container">
+            <input class="contact__input" type="text" placeholder="03-1234-5678" id="phone-number">
+          </div>
+        </div>
+        <div class="contact__row">
+          <div class="contact__label-content"> 
+            <label class="contact__label" for="email-address">Email Address</label>
+            <div class="contact__flag-container">
+              <p class="contact__flag mwwp-confirm-hidden">required</p>
+            </div>
+          </div>
+          <div class="contact__input-container">
+            <input class="contact__input" type="text" placeholder="Example: email@info.com" id="email-address">
+          </div>
+        </div>
+        <div class="contact__row">
+          <div class="contact__label-content">
+            <p class="contact__label">Services you would like to use</p>
+            <div class="contact__flag-container">
+              <p class="contact__flag contact__flag--optional mwwp-confirm-hidden">optional</p>
+            </div>
+          </div>
+          <div class="contact__input-container">
+            <div class="contact__checkbox-content">
+              <span class="mwform-checkbox-field horizontal-item">
+                <label>
+                  <input class="contact__checkbox" type="checkbox" id="recruitment-1" value="人材募集">
+                  <span class="mwform-checkbox-field-text">Recruitment</span>
+                </label>
+              </span>
+              <span class="mwform-checkbox-field horizontal-item">
+                <label>
+                  <input class="contact__checkbox" type="checkbox" id="recruitment-2" value="人材募集">
+                  <span class="mwform-checkbox-field-text">HR Development</span>
+                </label>
+              </span>
+              <span class="mwform-checkbox-field horizontal-item">
+                <label>
+                  <input class="contact__checkbox" type="checkbox" id="human-resources" value="アンマッチ人材・シニア問題">
+                  <span class="mwform-checkbox-field-text">HR and Senior Issues</span>
+                </label>
+              </span>
+              <span class="mwform-checkbox-field horizontal-item">
+                <label>
+                  <input class="contact__checkbox" type="checkbox" id="organizational" value="組織診断・事業診断">
+                  <span class="mwform-checkbox-field-text">Business Diagnostics</span>
+                </label>
+              </span>
+              <span class="mwform-checkbox-field horizontal-item">
+                <label>
+                  <input class="contact__checkbox" type="checkbox" id="legal" value="法律サポート">
+                  <span class="mwform-checkbox-field-text">Legal Assistance</span>
+                </label>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="contact__row contact__row--al-top">
+          <div class="contact__label-content">
+            <label class="contact__label" for="inquiry">Details of your inquiry</label>
+            <div class="contact__flag-container">
+              <p class="contact__flag contact__flag--optional mwwp-confirm-hidden">optional</p>
+            </div>
+          </div>
+          <div class="contact__input-container">
+            <textarea class="contact__text-area" name="" id="inquiry" cols="750" rows="12"></textarea>
+          </div>
+        </div>
+      </form>
+      <div class="contact__submit-container">
+        <div class="contact__agreement mwwp-confirm-hidden">
+          <span class="mwform-checkbox-field horizontal-item">
+            <label>
+              <input class="contact__checkbox" type="checkbox" id="agreement" value="上記個人情報の取り扱い、利用規約について同意する">
+              <span class="mwform-checkbox-field-text">I agree to the above Privacy Policy and Terms of Use</span>
+            </label>
+          </span>
+        </div>
+        <div class="button button--rectangle-black">
+          <input class="button__text button__text--large" type="button" value="Submit">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================== News Section =================================== -->
+  <section class="news">
+    <div class="news__container">
+      <h2 class="title__text">What's New</h2>
+      <div class="news__list">
+        <article class="news__item">
+          <p class="news__date">2018.00.00</p>
+          <p class="news__header">text dummy text dummy text dummy text dummy text dummy text dummy text dummy</p>
+          <p class="news__see-more">see more</p>
+        </article>
+        <article class="news__item">
+          <p class="news__date">2018.00.00</p>
+          <p class="news__header">text dummy text dummy text dummy text dummy text dummy text dummy text dummy</p>
+          <p class="news__see-more">see more</p>
+        </article>
+        <article class="news__item">
+          <p class="news__date">2018.00.00</p>
+          <p class="news__header">text dummy text dummy text dummy text dummy text dummy text dummy text dummy</p>
+          <p class="news__see-more">see more</p>
+        </article>
+        <article class="news__item">
+          <p class="news__date">2018.00.00</p>
+          <p class="news__header">text dummy text dummy text dummy text dummy text dummy text dummy text dummy</p>
+          <p class="news__see-more">see more</p>
+        </article>
+        <article class="news__item">
+          <p class="news__date">2018.00.00</p>
+          <p class="news__header">text dummy text dummy text dummy text dummy text dummy text dummy text dummy</p>
+          <p class="news__see-more">see more</p>
+        </article>
+      </div>
+      <a class="button button--border-gray" href="#">
+        <p class="button__text button__text--gray">View List</p>
+        <img class="button__arrow-icon" src="./src/img/button-arrow-icon-gray.png" alt="default arrow icon">
+      </a>
+    </div>
+  </section>
+
+  <!-- =================================== About Section =================================== -->
+  <section class="about">
+    <div class="about__container">
+      <h2 class="title__text">About Us</h2>
+      <table class="about__table">
+        <colgroup>
+          <col class="about__label-column">
+          <col class="about__data-column">
+        </colgroup>
+        <tr class="about__table-row">
+          <th class="about__label">Company Name</th>
+          <td class="about__data">Dream Supporter Inc.</td>
+        </tr>
+        <tr class="about__table-row">
+          <th class="about__label">Business</th>
+          <td class="about__data">Fee-charging job placement business, outsourcing, support for foreign students, hospitality training</td>
+        </tr>
+        <tr class="about__table-row">
+          <th class="about__label">Establishment</th>
+          <td class="about__data">January 20, 2020</td>
+        </tr>
+        <tr class="about__table-row">
+          <th class="about__label">Capital Stock</th>
+          <td class="about__data">5,000,000 Yen</td>
+        </tr>
+        <tr class="about__table-row">
+          <th class="about__label">Representative</th>
+          <td class="about__data">Hideki Seko</td>
+        </tr>
+        <tr class="about__table-row">
+          <th class="about__label">Address</th>
+          <td class="about__data">3F Building, Tokyo, Japan</td>
+        </tr>
+        <tr class="about__table-row" id="targetContactELement">
+          <th class="about__label">Phone Number</th>
+          <td class="about__data">☎︎ 00-0000-0000</td>
+        </tr>
+        <tr class="about__table-row">
+          <th class="about__label">Email Address</th>
+          <td class="about__data">email@dreamsupporter.com</td>
+        </tr>
+        <tr class="about__table-row">
+          <th class="about__label">Fee-Charging Employment Agency</th>
+          <td class="about__data">Permit No. 00000-0000</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- =================================== Greeting Section =================================== -->
+  <section class="greeting">
+    <div class="greeting__container"> 
+      <h2 class="title__text">Greetings from the President</h2>
+      <div class="greeting__letter">
+        <h3 class="greeting__header">We are a total consulting group whose strength lies in our experience in the HR field.</h3>
+        <p class="greeting__body">
+          The temporary staffing industry is facing a mountain of challenges, including the negative image triggered by the Lehman Shock, repeated legal revisions, and a deteriorating recruiting environment.
+          <br>
+          <br>
+          In this age of VUCA world (Volatility: change and instability, Uncertainty: uncertainty, Complexity: complexity, Ambiguity: vagueness and imprecision), we can naturally expect changes in the indirect external environment, such as exponential progress in AI and IoT and the arrival of the 100-year life age due to advances in medical technology and preventive medicine, making the situation truly chaotic and difficult to predict the medium-to-long term.
+          <br>
+          <br>
+          Dream Supporter has specialists in each of these areas, and while we are aware of the issues and trends in the industry as a whole, we are also able to make optimal proposals that are tailored to the circumstances and challenges of each individual company.
+          We hope to contribute to the development of the HR industry and the temporary staffing industry by carefully supporting each client company.
+        </p>
+        <div class="greeting__footer">
+          <p class="greeting__representative">President, Dream Supporter Inc.</p>
+          <p class="greeting__signature">Hideki Seko</p>
+          <div class="greeting__image-container">
+            <img class="greeting__image" src="./src/img/greeting-image.png" alt="image of the letter sender">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================== Footer Section =================================== -->
+  <footer class="footer">
+    <div class="footer__content">
+      <img class="footer__logo" src="./src/img/footer-logo.png" alt="company logo">
+      <div class="footer__text-container">
+        <div class="footer__address-container">
+          <p class="footer__address footer__address--bold">Dream Supporter Inc.</p>
+          <p class="footer__address">3F Building, Tokyo, Japan</p>
+        </div>
+        <a href="https://www.facebook.com" target="_blank">
+          <img class="footer__facebook" src="./src/img/facebook-logo.png" alt="facebook logo">
+        </a>
+      </div>
+    </div>
+    <p class="footer__copyright">Copyright © Dream Supporter All Rights Reserved.</p>
+  </footer>
+  <script src="./src/js/script.js"></script>
+</body>
+</html>

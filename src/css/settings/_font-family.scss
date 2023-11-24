@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'helvetica-condensed';
+  font-weight: 400;
+  src: url("../src/font/helvetica-condensed.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'HiraKakuPro-W3';
+  font-weight: 400;
+  src: url("../src/font/HiraKakuPro-W3.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'snellroundhand';
+  font-weight: 400;
+  src: url("../src/font/snellroundhand.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'HiraMinPro-W3';
+  font-weight: 400;
+  src: url("../src/font/HiraMinPro-W3.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'A-OTF-SeiKaiCB1Std-Regular';
+  font-weight: 400;
+  src: url("../src/font/A-OTF-SeiKaiCB1Std-Regular.otf") format("opentype");
+}
+
+$yugo: '游ゴシック', 'Yu Gothic', '游ゴシック体', 'YuGothic', sans-serif;
+$helvetica: 'helvetica-condensed', sans-serif;
+$hiraku: 'HiraKakuPro-W3', sans-serif;
+$snell: 'snellroundhand', sans-serif;
+$hiramin: 'HiraMinPro-W3', sans-serif;
+$seikai: 'A-OTF-SeiKaiCB1Std-Regular', sans-serif;
+$object-fit: 'object-fit: cover; object-position: center;';

@@ -1,0 +1,29 @@
+@use '../settings/color' as color;
+
+.white {
+  color: color.$white;
+}
+
+.white-bg {
+  background: color.$white;
+}
+
+.black {
+  color: color.$black;
+}
+
+.black-bg {
+  background: color.$black;
+}
+
+.primary {
+  color: color.$primary;
+}
+
+.primary-bg {
+  background: color.$primary;
+}
+
+.overflow {
+  overflow: hidden;
+}

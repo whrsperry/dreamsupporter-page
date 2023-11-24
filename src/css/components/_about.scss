@@ -1,0 +1,62 @@
+@use '../settings/color' as color;
+@use '../settings/font-family' as font-family;
+@use '../settings/font-weight' as font-weight;
+@use '../tools/media-queries' as media-queries;
+@use '../tools/mixin' as mixin;
+
+.about {
+  background-color: color.$white-fb;
+  border-bottom: 2px solid color.$gray-dc;
+
+  &__container {
+    padding: 90px 0;
+    @include mixin.max-width(1100px);
+    @include media-queries.mx1200 {
+      max-width: 100%;
+      padding: 60px 5%;
+    }
+    @include media-queries.sp {
+      padding: 45px 10%;
+    }
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  &__label-column {
+    background-color: color.$red-a1;
+  }
+  
+  &__data-column {
+    background-color: color.$red-e6;
+  }
+
+  &__label {
+    width: 310px;
+    padding: 35px 0;
+    color: color.$white;
+    font-size: 2.5rem;
+    font-weight: font-weight.$regular;
+    letter-spacing: 0.07em;
+    border-bottom: 1px solid color.$white;
+    @include media-queries.sp {
+      width: 40%;
+      padding: 15px 0;
+      font-size: 1.25rem;
+    }
+  }
+
+  &__data {
+    padding: 30px;
+    color: color.$white;
+    font-size: 2.5rem;
+    letter-spacing: 0.07em;
+    border-bottom: 1px solid color.$white;
+    @include media-queries.sp {
+      padding: 15px;
+      font-size: 1.25rem;
+    }
+  }
+}
