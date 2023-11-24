@@ -177,7 +177,7 @@
     font-size: 3rem;
     font-weight: font-weight.$bold;
     line-height: function.getem(40, 42.85);
-    white-space: nowrap;
+    white-space: wrap;
     background: color.$red-e6;
     @include media-queries.mx1200 {
       left: -80px;
